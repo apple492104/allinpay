@@ -5,7 +5,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Lambert\\Allinpay\\": "src/"
+            "Lamberd\\Allinpay\\": "src/"
         }
     },
     "authors": [
