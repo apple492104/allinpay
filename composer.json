@@ -1,0 +1,28 @@
+{
+    "name": "lambert/allinpay",
+    "description": "allinpay",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Lambert\\Allinpay\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Lambert",
+            "email": "apple492104@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.0",
+        "guzzlehttp/guzzle": "7.5.0",
+        "symfony/validator": "5.4.19",
+        "doctrine/annotations": "2.0.1",
+        "symfony/cache": "5.4.19",
+        "symfony/expression-language": "5.4.19",
+        "symfony/monolog-bundle":"3.8.0",
+        "ext-json": "*"
+    }
+}
