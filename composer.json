@@ -1,5 +1,5 @@
 {
-    "name": "lambert/allinpay",
+    "name": "lamberd/allinpay",
     "description": "allinpay",
     "type": "library",
     "license": "MIT",
@@ -10,7 +10,7 @@
     },
     "authors": [
         {
-            "name": "Lambert",
+            "name": "Lamberd",
             "email": "apple492104@gmail.com"
         }
     ],

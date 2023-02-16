@@ -1,9 +1,9 @@
 <?php
 
-namespace Lambert\Allinpay;
+namespace Lamberd\Allinpay;
 
-use Lambert\Allinpay\exception\ErrorException;
-use Lambert\Allinpay\util\CommonUtil;
+use Lamberd\Allinpay\exception\ErrorException;
+use Lamberd\Allinpay\util\CommonUtil;
 
 /**
  * @example {

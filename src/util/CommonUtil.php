@@ -1,9 +1,9 @@
 <?php
 
-namespace Lambert\Allinpay\util;
+namespace Lamberd\Allinpay\util;
 
 
-use Lambert\Allinpay\exception\ErrorException;
+use Lamberd\Allinpay\exception\ErrorException;
 
 class CommonUtil
 {

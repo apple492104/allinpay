@@ -1,10 +1,10 @@
 <?php
 
-namespace Lambert\Allinpay;
+namespace Lamberd\Allinpay;
 
-use Lambert\Allinpay\exception\ErrorException;
-use Lambert\Allinpay\exception\InvalidArgumentException;
-use Lambert\Allinpay\util\CommonUtil;
+use Lamberd\Allinpay\exception\ErrorException;
+use Lamberd\Allinpay\exception\InvalidArgumentException;
+use Lamberd\Allinpay\util\CommonUtil;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Validator\Validation;
 

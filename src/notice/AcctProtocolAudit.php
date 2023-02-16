@@ -1,6 +1,6 @@
 <?php
 
-namespace Lambert\Allinpay\notice;
+namespace Lamberd\Allinpay\notice;
 
 /**
  * 5.0.7【账户提现协议签约异步通知】

@@ -1,9 +1,9 @@
 <?php
 
-namespace Lambert\Allinpay\Member;
+namespace Lamberd\Allinpay\Member;
 
-use Lambert\Allinpay\BaseObject;
-use Lambert\Allinpay\exception\ErrorException;
+use Lamberd\Allinpay\BaseObject;
+use Lamberd\Allinpay\exception\ErrorException;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**

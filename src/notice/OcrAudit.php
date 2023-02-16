@@ -1,6 +1,6 @@
 <?php
 
-namespace Lambert\Allinpay\notice;
+namespace Lamberd\Allinpay\notice;
 
 /**
  * 5.0.5【影印件异步通知】

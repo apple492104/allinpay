@@ -1,6 +1,6 @@
 <?php
 
-namespace Lambert\Allinpay\util;
+namespace Lamberd\Allinpay\util;
 
 class Config
 {

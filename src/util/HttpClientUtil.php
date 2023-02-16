@@ -1,10 +1,10 @@
 <?php
 
-namespace Lambert\Allinpay\util;
+namespace Lamberd\Allinpay\util;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
-use Lambert\Allinpay\exception\ErrorException;
+use Lamberd\Allinpay\exception\ErrorException;
 use Symfony\Component\HttpKernel\Log\Logger;
 
 class HttpClientUtil

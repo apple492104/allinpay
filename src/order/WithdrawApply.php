@@ -1,8 +1,8 @@
 <?php
 
-namespace Lambert\Allinpay\order;
+namespace Lamberd\Allinpay\order;
 
-use Lambert\Allinpay\BaseObject;
+use Lamberd\Allinpay\BaseObject;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**

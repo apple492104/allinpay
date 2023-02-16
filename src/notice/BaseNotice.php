@@ -1,10 +1,10 @@
 <?php
 
-namespace Lambert\Allinpay\notice;
+namespace Lamberd\Allinpay\notice;
 
-use Lambert\Allinpay\exception\ErrorException;
-use Lambert\Allinpay\util\CommonUtil;
-use Lambert\Allinpay\util\SignUtil;
+use Lamberd\Allinpay\exception\ErrorException;
+use Lamberd\Allinpay\util\CommonUtil;
+use Lamberd\Allinpay\util\SignUtil;
 
 abstract class BaseNotice
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Lambert\Allinpay\exception;
+namespace Lamberd\Allinpay\exception;
 
 class ErrorException extends \Exception
 {

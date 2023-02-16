@@ -1,6 +1,6 @@
 <?php
 
-namespace Lambert\Allinpay;
+namespace Lamberd\Allinpay;
 
 class Response
 {
