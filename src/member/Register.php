@@ -19,6 +19,12 @@ class Register extends BaseObject
 
     const COMPANY_CHANGES = [1, 2];
 
+    const CHANGES_MAP = [
+        1 => '企业会员--企业',
+        2 => '企业会员--事业单位',
+        3 => '个人会员',
+    ];
+
     /**
      * 应用编号
      * @var string
