@@ -17,7 +17,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=7.0",
-        "guzzlehttp/guzzle": "7.5.0",
+        "guzzlehttp/guzzle": "^6.3",
         "symfony/validator": "5.4.19",
         "doctrine/annotations": "2.0.1",
         "symfony/cache": "5.4.19",
