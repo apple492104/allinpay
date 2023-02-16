@@ -18,11 +18,11 @@
     "require": {
         "php": ">=7.0",
         "guzzlehttp/guzzle": "^6.3",
-        "symfony/validator": "5.4.19",
-        "doctrine/annotations": "2.0.1",
-        "symfony/cache": "5.4.19",
-        "symfony/expression-language": "5.4.19",
-        "symfony/monolog-bundle":"3.8.0",
+        "symfony/validator": "^5.4.19",
+        "doctrine/annotations": "^2.0.1",
+        "symfony/cache": "^5.4.19",
+        "symfony/expression-language": "^5.4.19",
+        "symfony/monolog-bundle":"^3.8.0",
         "ext-json": "*"
     }
 }
