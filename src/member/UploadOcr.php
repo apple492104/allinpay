@@ -109,7 +109,7 @@ class UploadOcr extends BaseObject
      * @param int $picType
      * @throws ErrorException
      */
-    public function setPicType(int $picType): void
+    protected function setPicType(int $picType): void
     {
         if (array_key_exists($picType, self::PIC_TYPE_MAP)) {
             $this->picType = $picType;
