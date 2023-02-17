@@ -4,7 +4,7 @@ namespace Lamberd\Allinpay\util;
 
 class Config
 {
-    public string $env = '';
+    public string $env = 'dev';
 
     public string $key = '';
 
@@ -45,5 +45,14 @@ class Config
     public static function reset(): void
     {
         self::$instance = null;
+    }
+
+    /**
+     * 判断测试环境
+     * @return bool
+     */
+    public function isDev(): bool
+    {
+        return $this->env == 'dev';
     }
 }

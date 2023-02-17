@@ -7,7 +7,8 @@ use Lamberd\Allinpay\exception\ErrorException;
 
 class CommonUtil
 {
-    public const BASE_URL = 'https://interfacetest.allinpaygx.com';
+    public const TEST_BASE_URL = 'https://interfacetest.allinpaygx.com';
+    public const PROD_BASE_URL = 'https://interface.allinpaygx.com';
 
     /**
      * @param $url
@@ -15,7 +16,7 @@ class CommonUtil
      * @return false|string
      * @throws ErrorException
      */
-    public static function post($url, $params, $option = []): bool|string
+    public static function post($url, $params, $option = [])
     {
         return HttpClientUtil::post(self::getUrl($url), self::getParams($params), $option);
     }
@@ -27,7 +28,8 @@ class CommonUtil
      */
     private static function getUrl($url): string
     {
-        $baseUrl = rtrim(self::BASE_URL, '/');
+        $baseUrl = Config::getInstance()->isDev() ? self::TEST_BASE_URL : self::PROD_BASE_URL;
+        $baseUrl = rtrim($baseUrl, '/');
         $method = ltrim($url, '/');
         return $baseUrl . '/' . $method . '?__traceId=' . md5(uniqid());
     }
