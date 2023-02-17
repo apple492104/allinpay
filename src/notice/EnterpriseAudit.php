@@ -92,4 +92,13 @@ class EnterpriseAudit extends BaseNotice
      * @var string
      */
     public string $unionBank = '';
+
+    /**
+     * 判断审核是否成功
+     * @return bool
+     */
+    public function isSuccess(): bool
+    {
+        return $this->code == '0000';
+    }
 }
