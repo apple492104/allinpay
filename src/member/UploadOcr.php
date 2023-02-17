@@ -71,7 +71,7 @@ class UploadOcr extends BaseObject
      * @Assert\NotBlank()
      * @Assert\Choice(choices=UploadOcr::PIC_TYPE_ARRAY)
      */
-    public int $picType;
+    protected int $picType;
 
     /**
      * 影印件图片的base64码 图片大小不超过500K
@@ -89,13 +89,32 @@ class UploadOcr extends BaseObject
 
     /**
      * 将远程图片转码成base64
+     * @param int $picType
      * @param string $picUrl
      * @param int $sizeLimit 默认500K限制
      * @return void
      * @throws ErrorException
      */
-    public function setPicture(string $picUrl, int $sizeLimit = 500): void
+    public function setPictureInfo(int $picType, string $picUrl, int $sizeLimit = 500): void
     {
-        $this->picture = $this->getPicBase($picUrl, $sizeLimit);
+        $this->setPicType($picType);
+        try {
+            $this->picture = $this->getPicBase($picUrl, $sizeLimit);
+        } catch (ErrorException $e) {
+            throw new ErrorException(self::PIC_TYPE_MAP[$picType] . $e->getMessage());
+        }
+    }
+
+    /**
+     * @param int $picType
+     * @throws ErrorException
+     */
+    public function setPicType(int $picType): void
+    {
+        if (array_key_exists($picType, self::PIC_TYPE_MAP)) {
+            $this->picType = $picType;
+        } else {
+            throw new ErrorException('无效的上传材料类型');
+        }
     }
 }
