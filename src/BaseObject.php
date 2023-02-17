@@ -130,7 +130,6 @@ abstract class BaseObject
             $res->msg = $e->getMessage();
         }
 
-        var_dump($res);
         return $res;
     }
 }

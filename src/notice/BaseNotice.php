@@ -32,7 +32,7 @@ abstract class BaseNotice
      * 前面校验
      * @throws ErrorException
      */
-    public static function signCheck(array $params, string $key): void
+    protected static function signCheck(array $params, string $key): void
     {
         if (!isset($params['sign'])) {
             throw new ErrorException('缺少sign参数，无法确认数据正确性');
@@ -53,7 +53,7 @@ abstract class BaseNotice
      * @return static
      * @throws ErrorException
      */
-    public static function load(array $params, string $key): static
+    public static function load(array $params, string $key): BaseNotice
     {
         self::signCheck($params, $key);
 
