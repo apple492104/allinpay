@@ -14,7 +14,6 @@ abstract class BaseNotice
      */
     public string $timestamp = '';
 
-
     /**
      * 版本号
      * @var string
@@ -59,21 +58,25 @@ abstract class BaseNotice
 
         $object = new static();
         $attributes = CommonUtil::getAllAttr($object, \ReflectionProperty::IS_PUBLIC);
-        $object->setAttributes($attributes);
         foreach ($params as $key => $value) {
             if (in_array($key, $attributes)) {
                 $object->{$key} = $value;
+                $object->setAttributes($key, $value);
             }
         }
         return $object;
     }
 
+
     /**
-     * @param array $attributes
+     * 将所有全部集合到attributes
+     * @param $key
+     * @param $value
+     * @return void
      */
-    public function setAttributes(array $attributes): void
+    public function setAttributes($key, $value): void
     {
-        $this->attributes = $attributes;
+        $this->attributes[$key] = $value;
     }
 
     /**
