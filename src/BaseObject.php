@@ -94,6 +94,9 @@ abstract class BaseObject
     public function getPicBase(string $url, int $sizeLimit = 0): string
     {
         $headerInfo = get_headers($url, true);
+        if (!isset($headerInfo['Content-Length'])) {
+            throw new ErrorException("图片请确认是否存在");
+        }
         $size = ceil($headerInfo['Content-Length'] / 1000);
         if ($size == 0) {
             throw new ErrorException("图片大小为0，确认远程图片存在");
