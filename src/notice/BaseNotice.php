@@ -75,4 +75,12 @@ abstract class BaseNotice
     {
         $this->attributes = $attributes;
     }
+
+    /**
+     * @return array
+     */
+    public function getAttributes(): array
+    {
+        return $this->attributes;
+    }
 }
