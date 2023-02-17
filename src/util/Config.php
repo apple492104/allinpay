@@ -8,11 +8,17 @@ class Config
 
     public string $key = '';
 
+    public string $sysId = '';
+
     public string $proxy = '';
 
-    private function __construct(){}
+    private function __construct()
+    {
+    }
 
-    private function __clone(){}
+    private function __clone()
+    {
+    }
 
     /**
      * 单件实例
