@@ -6,16 +6,16 @@ use Lamberd\Allinpay\BaseObject;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * 1.1.3【绑定银行卡查询】
+ * 1.1.2【解绑绑定银行卡】
  *
- * 该接口用于查询用户已绑定的某张银行卡，或已绑定的全部银行卡，响应报文支持返回多条记录。
+ * 如需解绑银行卡，直接调用该接口，无需调用其它接口进行确认。
+ * 支持解绑个人会员绑定的银行卡和企业会员绑定的法人银行卡。
  */
-class QueryBankCard extends BaseObject
+class UnbindBankCard extends BaseObject
 {
-
     public function getUrl(): string
     {
-        return '/yst/foreign/openMember/queryBankCard';
+        return '/yst/foreign/openMember/unbindBankCard';
     }
 
     /**
@@ -27,8 +27,9 @@ class QueryBankCard extends BaseObject
     public string $yunid = '';
 
     /**
-     * 卡号(base64转码)
+     * 解绑卡号(base64转码)
      * @var string
+     * @Assert\NotBlank()
      */
     protected string $cardNo = '';
 
