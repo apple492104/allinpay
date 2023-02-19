@@ -42,8 +42,14 @@ class CommonUtil
         if (empty(Config::getInstance()->key)) {
             throw new ErrorException('请配置Config信息');
         }
+
+        foreach ($params as $key => $value) {
+            if (empty($value)) {
+                unset($params[$key]);
+            }
+        }
+
         $params['key'] = Config::getInstance()->key;
-        unset($params['sign']);
         $params['sign'] = SignUtil::encrypt($params);
         unset($params['key']);
         return $params;

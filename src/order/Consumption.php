@@ -31,17 +31,15 @@ class Consumption extends BaseObject
 
     /**
      * 消费金额(分为单位) 订单金额=分账列表总金额+手续费
-     * @var string
+     * @var int
      * @Assert\NotBlank()
+     * @Assert\GreaterThan(value=0)
      */
-    public string $amount = '';
-
+    public int $amount = 0;
 
     /**
      * 支付方式，目前只支持网关支付
      * 15网关支付 16网关支付(集团)
-     * @var int
-     * @Assert\NotBlank()
      */
     public int $payType = 15;
 
@@ -49,7 +47,7 @@ class Consumption extends BaseObject
      * 需分账时必填(最多支持10个)
      * @var array
      */
-    public array $arrJson;
+    public array $arrJson = [];
 
     /**
      * 异步结果通知地址
@@ -102,10 +100,8 @@ class Consumption extends BaseObject
     /**
      * (payType为15、16时填写(必填))gateid 不为空时，该域只能上送 “B2C”或者“B2B”;
      * gateid 为 空 时 ， 该 域 可 以 上 送 “B2C”, “B2B”, “B2C, B2B”;
-     * @Assert\NotBlank()
-     * @Assert\Choice({'B2C', 'B2B'})
      */
-    public string $paytype;
+    public string $paytype = 'B2C,B2B';
 
     /**
      * (payType为15、16时填写(选填))商品名称(base64转码)
@@ -133,14 +129,14 @@ class Consumption extends BaseObject
      * 微信原生 APP： WECHATPAY_APP_OPEN)
      * @var string
      */
-    public string $orderExpireDatetime;
+    public string $orderExpireDatetime = '';
 
     /**
      * @param string $summary
      */
     public function setSummary(string $summary): void
     {
-        $this->summary = $summary;
+        $this->summary = $this->base($summary);
     }
 
     /**
@@ -148,6 +144,6 @@ class Consumption extends BaseObject
      */
     public function setGoodsName(string $goodsName): void
     {
-        $this->goodsName = $goodsName;
+        $this->goodsName = $this->base($goodsName);
     }
 }

@@ -16,9 +16,7 @@ class SignUtil
 
         $str = '';
         foreach ($array as $key => $value) {
-            if ($value) {
-                $str .= "{$key}={$value}&";
-            }
+            $str .= "{$key}={$value}&";
         }
 
         return md5(rtrim($str, '&'));
