@@ -26,7 +26,6 @@ class WithdrawApply extends BaseObject
      * 云商通外部系统编号(唯一的)
      * @link Register 调用成功返回yunid
      * @var string
-     * @Assert\NotBlank()
      */
     public string $yunid = '';
 
@@ -44,9 +43,9 @@ class WithdrawApply extends BaseObject
 
     /**
      * 手续费(不传默认为0，单位：分，如 amount 为 100，fee 为 2，实际 到账金额为 98，平台手续费收入为 2)
-     * @var string
+     * @var int
      */
-    public string $fee = '';
+    public int $fee = 0;
 
     /**
      * 1(若为企业会员提现到个人卡必填1)
@@ -86,8 +85,6 @@ class WithdrawApply extends BaseObject
     /**
      * 提现方式(D0、D0customized、D1和T1customized) D0：D+0 到账 D1：D+1 到账 T1customized：T+1 到账，仅工作日代付
      * @var string
-     * @Assert\NotBlank()
-     * @Assert\Choice({'D0','D0customized','D1和T1customized','T1customized'})
      */
     public string $withdrawType = 'D0';
 
